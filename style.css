@@ -1,0 +1,17 @@
+body {
+  font-family: ProximaNova, sans-serif:
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px
+  background-color: #f4f4f4:
+}
+header {
+    background: #002f6c; /*Match Snook School Colors*/
+    color: #fff
+    padding: 10px 20px
+    text-align: center;
+}
+header a {
+  color: #fff;
+  text-decoration: none
+}
