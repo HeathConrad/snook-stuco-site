@@ -4,6 +4,9 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Force JavaScript to apply Figtree to the root document body immediately on load
+    document.body.style.fontFamily = "'Figtree', sans-serif";
+
     // Select essential interface elements
     const navbar = document.querySelector(".navbar");
     const navLinks = document.querySelectorAll(".nav-links a");
@@ -27,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     link.classList.remove("active");
                     if (link.getAttribute("href") === `#${sectionTargetId}`) {
                         link.classList.add("active");
+                        // Explicitly ensures active typography renders via Figtree
+                        link.style.fontFamily = "'Figtree', sans-serif";
                     }
                 });
             }
@@ -52,6 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
         syncActiveScrollState();
         toggleStickyNavbarAccent();
     });
+
+    // Execute instant alignment checks on primary document instantiation loops
+    syncActiveScrollState();
+    toggleStickyNavbarAccent();
+});
 
     // Execute instant alignment checks on primary document instantiation loops
     syncActiveScrollState();
