@@ -1,278 +1,29 @@
 /* ==========================================
-   1. GLOBAL SYSTEM RESETS & FONTS
+   GLOBAL TYPOGRAPHY FORCE OVERRIDE
    ========================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth; /* Enables elegant scrolling between anchors */
+    /* Forces Figtree onto all child elements, overriding system defaults like Arial */
+    font-family: 'Figtree', sans-serif; 
 }
 
 body {
-    font-family: 'Figtree', sans-serif; /* Strips out Times New Roman */
     background-color: #0d1527;          /* Premium midnight-blue canvas layer */
     color: #f3f4f6;                     /* Crisp, readable off-white text */
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Makes the geometric letters look extra sharp on Mac/iOS */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* ==========================================
-   2. TEXT-BASED GRAPHIC UI NAVIGATION
-   ========================================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: rgba(13, 21, 39, 0.85);
-    backdrop-filter: blur(12px);       /* Modern glass graphic effect */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Designing a stylized geometric badge out of plain text letters */
-.nav-logo {
-    font-weight: 900;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-icon-box {
-    background: linear-gradient(135deg, #003366, #00509e); /* Snook High School Blue */
-    color: #ffcc00; /* School Gold accent */
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-weight: 900;
-    font-size: 1.1rem;
-    border: 1px solid rgba(255, 217, 0, 0.3);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: color 0.25s ease;
-}
-
-.nav-links a:hover, 
-.nav-links a.active {
-    color: #ffcc00; /* Changes style on hover without image files */
-}
-
-/* ==========================================
-   3. HERO BANNER (PURE CODE GRADIENTS)
-   ========================================== */
-.hero-section {
-    position: relative;
-    padding: 120px 5% 100px 5%;
-    text-align: center;
-    background: radial-gradient(circle at top right, #003366 0%, #0d1527 70%);
-    overflow: hidden;
-}
-
-/* Creating an abstract background graphic container natively */
-.hero-graphic-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, #0d1527, transparent);
-    pointer-events: none;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.badge {
-    background-color: rgba(255, 204, 0, 0.1);
-    color: #ffcc00;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid rgba(255, 204, 0, 0.2);
-    display: inline-block;
-    margin-bottom: 24px;
-}
-
+/* Ensure heavy graphic titles use Figtree's maximum weight */
 .main-title {
-    font-size: 3.5rem;
+    font-family: 'Figtree', sans-serif;
     font-weight: 900;
+    font-size: 3.5rem;
     line-height: 1.15;
     letter-spacing: -1.5px;
     color: #ffffff;
     margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 1.25rem;
-    color: #94a3b8;
-    margin-bottom: 40px;
-}
-
-/* Pure CSS Interactive Button Graphics */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background-color: #ffcc00;
-    color: #0d1527;
-}
-
-.btn-primary:hover {
-    background-color: #e6b800;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-/* ==========================================
-   4. FLEXIBLE GRID & CARD STRUCTURES
-   ========================================== */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 5% 100px 5%;
-}
-
-.content-block {
-    padding: 60px 0;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-    margin-bottom: 12px;
-}
-
-.section-desc {
-    color: #94a3b8;
-    max-width: 650px;
-    margin-bottom: 40px;
-    font-size: 1.05rem;
-}
-
-/* Clean, modern multi-column desktop grid that turns into 1 column on mobile */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    padding: 35px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 204, 0, 0.3);
-}
-
-/* Top graphic band accent */
-.card-graphic-accent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #00509e;
-}
-
-.structural-highlight .card-graphic-accent {
-    background-color: #ffcc00; /* Highlights vital TASC announcements differently */
-}
-
-.card h3 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.card p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-}
-
-/* ==========================================
-   5. SITE FOOTER
-   ========================================== */
-.site-footer {
-    text-align: center;
-    padding: 40px 5%;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    background-color: #090d1a;
-}
-
-.site-footer p {
-    color: #64748b;
-    font-size: 0.85rem;
-}
-
-/* ==========================================
-   6. RESPONSIVE PHONE VIEWPORT OVERRIDES
-   ========================================== */
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 2.3rem;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .hero-buttons {
-        flex-direction: column;
-    }
 }
