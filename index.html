@@ -3,21 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewerport" content="width=device-width, initial-scale=1.0">
-  <title> Snook HS Student Council </title>
+  <title> Snook HS Student Council | TASC District 14</title>
+  
+  <!-- 1. Google Fonts Embed Loop: Loading Figtree (Weights 400 for text, 700 & 900 for graphics) -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- 2. Connection to your stylesheet (File 2) -->
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
+
+  <!--Main Navigation Bar Component -->
+  <nav class="navbar">
+    <div class="nav-logo">SNOOK STUCO</div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active" >Home<</a></li>
+      <li><a href="#about">About / Officers</a></li>
+      <li><a href="#events">TASC District 14</a></li>
+    </ul>
+  </nav>
+  <!-- Hero Display Banner (Using Code-Based Graphic Effects) -->
+  <healer id="home" class="hero-section">
+    <!-- Visual Accent: Code-generated background pattern container inside CSS -->
+    <div class="hero-graphic-overlay"></div>
+
+    <div class="hero-content">
+      <span class="badge">Official Website</span>
+      <h1 class="main-title">Snook High School <br>Student Council</h1>
+      <p class="stubtitle">Leading with Pride in TASC District 14</p>
+      <div class="hero-buttons">
+        <a href="#events" class="btn-primary">View Calendar</a>
+        <a href="#about" class="btn-secondary">Meet the Officers</a>
+      </div>
+    </div>
   <header>
-    <h1> Snook High School Student Council </h1>
-    <nav>
-      <a href="index.html"> Home </a> |
-      <a href="events.html"> Events </a>
-      <a href="members.html"> Our Team </a>
-    </nav>
-  </header>
-  <main>
-    <h2> Welcome, Bluejays! </h2>
-    <p> The official hub for Snook HS student leadership, activities, and community service. </p>
-  </main> </footer>
+
+  <!-- Main Content Grid -->
+  <main class="container">
+
+     <!-- Section: Overview & Leadership -->
+     <section id="about" class="content-block">
+         <h2 class="section-title">Council Leadership</h2>
+         <p class="section-desc">Empowering student voices and driving school spirit across the Snook community through impactful local projects and leadership development workshops.</p>
+
+         <div class="grid-layout">
+           <!-- Card Component with CSS-only geometric drop shadow graphic -->
+           <div class="card">
+             <div class="card-graphic-accent"></div>
+              <h3>Executive Board</h3>
+              <p>Our student officers plan campus spirit weeks, orchestrate community service projects, and manage council representation at the district level.</p>
+           </div>
+           <div class="card">
+             <div class="card-graphic-accent"></div>
+             <h3>Class Representatives</h3>
+             <p>Elected delegates from each grade level bridge the communication loop between the student body and campus administrators</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Section: Regional TASC Integration -->
+  <section id="events" class="content-block">
+    <h2 class="section-title">TASC District 14 Hub</h2>
+    <p class="section-desc">Stay informed about district conventions, state competitions, and collaborative community service managed across our Texas Association of Student Councils district network.</p>
+
+    <div class="grid-layout">
+        <div class="card structural-highlight">
+            <div class="card-graphic-accent"></div>
+            <h3>Upcomming District Meetings</h3>
+            <p>Review the timeline for seasonal council workshops, officer leadership summits, and regional award package deadlines.</p>
+        </div>
+        <div class="card">
+            <div class="card-graphic-accent"></div>
+            <h3>State Reports</h3>
+            <p>Access the point logging files used to track community service, school spirit campaigns, and dashboard criteria required for annual TASC excellence awards.</p>
+        </div>
+     </div>
+ </section>
+
+</main>
+<!-- Site Footer -->
+    <footer class="site-folder">
+      <p>&copy; 2026 Snook HS Student Council. Developed completely from scratch using vanilla structures.</p>
+  </footer>
+  
+  <!-- Connection to your interactive functionality -->
+    <script src="main.js">
 </body>
-<html>
+</html>
